@@ -1,0 +1,92 @@
+
+.site-header {
+	align-content: center;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+  height: 90vh;
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+
+	@media only screen and (min-width:600px){
+		align-items: center;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+	}
+
+	@media only screen and (min-width:1000px){
+		flex-direction: row;
+		justify-content: flex-start;
+		padding-left: 2rem;
+	}
+}
+
+.instagrid-logo {
+  margin-bottom: 1rem;
+  width: 300px;
+
+	img {
+		height:auto;
+		max-width: 100%;
+	}
+
+	@media only screen and (min-width:600px){
+		padding-right: 20px;
+	}
+}
+
+.search-bar {
+	display: block;
+	width: 300px;
+}
+
+.search-bar-inner {
+  border-bottom: 1px solid #dbdbdb;
+	display: inline-block;
+	position: relative;
+	width: 100%;
+
+	&:before {
+		content: "#";
+		font-size: 2rem;
+		font-weight: 700;
+		position: absolute;
+		left: .5rem;
+		top: .5rem;
+	}
+
+	@media only screen and (min-width:600px){
+			width: 240px;
+		}
+
+	@media only screen and (min-width:1000px){
+				width: 300px;
+		}
+}
+
+.search-bar input {
+	background-color: transparent;
+	border:none;
+  color: $main-white;
+	font-family:'Open-Sans', serif;
+  font-size: 1.1rem;
+	padding-bottom: .4rem;
+	padding-left: 2rem;
+}
+
+.search-button {
+	background-color: transparent;
+	border: none;
+	display:inline-block;
+	font-family: FontAwesome;
+	font-size: 1rem;
+	font-weight: 700;
+	position: absolute;
+	padding-bottom: 1rem;
+
+	&:hover {
+		color: #e2231a;
+		cursor: pointer;
+	}
+}

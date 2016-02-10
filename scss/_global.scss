@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+html {
+	font-size: $main-font;
+}
+
+body {
+  background-color: $background-black;
+  color: $main-white;
+	font-family: 'Open-Sans', sans-serif;
+	line-height: 1;
+}
+
+.container {
+ padding: 0 2rem;
+ margin: 0;
+ width: 100%;
+}
+
+img {
+	height: auto;
+
+  a & {
+		border: 0;
+	}
+}
