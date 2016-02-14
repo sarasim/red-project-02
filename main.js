@@ -1,4 +1,3 @@
-
 $(function(){
 
 $('button').on('click', function(event){
@@ -19,19 +18,17 @@ $('.site-header').css('height', 'auto');
       console.log(instaData);
 
       $.each(instaData.data, function(index, value){
-        list += '<li>';
-        list += '<div class="item-wrapper"><img src=' +value.images.standard_resolution.url +'>';
+        list += '<li class="photo-wrapper">';
+        list += '<img src=' +value.images.standard_resolution.url +'>';
         list +=     '<div class="meta-data">';
         list +=         '<div class="user-wrapper"><img src=' +value.user.profile_picture+ '>';
         list +=         '</div>';
         list +=         '<div class="social-info"><p class="user-name">'+value.user.username+'</p>';
-        list +=             '<span><i class="fa fa-comment"></i>'+value.comments.count;
-        list +=             '<i class="fa fa-heart"></i>'+value.likes.count+'</span>';
+        list +=             '<span><i class="fa fa-comment"></i> '+value.comments.count;
+        list +=             ' <i class="fa fa-heart"></i> '+value.likes.count+' </span>';
         list +=         '</div>';
         list +=     '</div>';
-        list += '</div>';
         list += '</li>';
-
       });
 
       $photoGrid.empty().append(list);

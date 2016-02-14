@@ -4,39 +4,30 @@
 	width: 100%;
 }
 
-.photos {
-	display: block;
-	position: relative;
-}
-
-.photos ul {
+.list {
 	display:flex;
 	flex-flow: row wrap;
 	list-style: none;
-	justify-content: space-around;
 	margin-bottom: 2rem;
 }
 
-.photos li {
+.photo-wrapper {
 	flex: 0 1 100%;
+	position: relative;
+
+	img {
+		width: 100%;
+	}
 
 	@media only screen and (min-width:600px){
-		.photos li {
-			flex: 0 1 50%;
-			max-width: 50%;
-		}
+		flex: 0 1 50%;
 	}
-}
 
-@media only screen and (min-width:1000px){
-	.photos li {
+	@media only screen and (min-width:1000px){
 		flex: 0 1 25%;
 	}
 }
 
-.photos li .item-wrapper{
-	position: relative;
-}
 
 .meta-data{
 	background:rgba(0,0,0,0.6);
@@ -44,6 +35,7 @@
 	color: $main-white;
 	display: flex;
 	font-size: 1rem;
+	justify-content: space-between;
 	padding: .5rem;
 	position: absolute;
 	width: 100%;
@@ -51,7 +43,6 @@
 }
 
 .user-wrapper {
-	height: auto;
 	overflow: hidden;
 
 	img {
@@ -63,7 +54,6 @@
 .social-info{
 	font-weight: 700;
 	text-align: right;
-	width: 65%;
 }
 
 .user-name{

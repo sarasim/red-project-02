@@ -1,6 +1,6 @@
 
 .site-header {
-	align-content: center;
+	align-items: center;
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
@@ -9,14 +9,11 @@
 	padding-top: 2rem;
 
 	@media only screen and (min-width:600px){
-		align-items: center;
-		flex-direction: row;
-		justify-content: center;
+		flex-flow: row nowrap;
 		width: 100%;
 	}
 
 	@media only screen and (min-width:1000px){
-		flex-direction: row;
 		justify-content: flex-start;
 		padding-left: 2rem;
 	}
@@ -39,11 +36,14 @@
 .search-bar {
 	display: block;
 	width: 300px;
+	text-align: center;
+	@media only screen and (min-width: 600px) {
+		width: 240px;
+	}
 }
 
 .search-bar-inner {
   border-bottom: 1px solid #dbdbdb;
-	display: inline-block;
 	position: relative;
 	width: 100%;
 
@@ -53,11 +53,11 @@
 		font-weight: 700;
 		position: absolute;
 		left: .5rem;
-		top: .5rem;
+		top: -.25rem;
 	}
 
 	@media only screen and (min-width:600px){
-			width: 240px;
+			width: 100%;
 		}
 
 	@media only screen and (min-width:1000px){
@@ -73,17 +73,21 @@
   font-size: 1.1rem;
 	padding-bottom: .4rem;
 	padding-left: 2rem;
+	width: 100%
 }
 
 .search-button {
 	background-color: transparent;
 	border: none;
+	color: #fff;
 	display:inline-block;
 	font-family: FontAwesome;
 	font-size: 1rem;
 	font-weight: 700;
 	position: absolute;
 	padding-bottom: 1rem;
+	right: 0;
+	top: 0;
 
 	&:hover {
 		color: #e2231a;
