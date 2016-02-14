@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <meta charset="utf-8">
-      <title>Instagrid</title>
-      <link rel="stylesheet" href="./build/css/style.min.css">
-      <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Instagrid</title>
+  <link rel="stylesheet" href="./build/css/style.min.css">
+  <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+</head>
 
-  <body>
-    <header class="site-header container">
-      <div class="instagrid-logo">
-          <img src="images/instagrid-logo.svg" alt="Instagrid Logo"/>
+<body>
+  <header class="site-header container">
+    <div class="instagrid-logo">
+      <img src="images/instagrid-logo.svg" alt="Instagrid Logo"/>
+    </div>
+    <form class="search-bar">
+      <div class="search-bar-inner">
+        <input type="text" name="hashtag" value="" placeholder="Search for a hashtag"/>
+        <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
       </div>
-      <form class="search-bar">
-          <div class="search-bar-inner">
-            <input type="text" name="hashtag" value="" placeholder="Search for a hashtag"/>
-            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
-          </div>
-      </form>
-    </header>
+    </form>
+  </header>
 
-    <section class="photogrid">
-          <ul class="list"></ul>
-    </section>
+  <section class="photogrid">
+    <img src="images/ajax-loader.gif" class="loader-gif"/>
+    <ul class="list"></ul>
+  </section>
 
-    <footer class="site-footer container">
-      <div class="copyright-info">
-          <p>© Copyright 2015 <span class="uppercase">Instagrid</span></p>
-      </div>
-    </footer>
+  <footer class="site-footer container">
+    <div class="copyright-info">
+      <p>© Copyright 2015 <span class="uppercase">Instagrid</span></p>
+    </div>
+  </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="build/js/main.min.js"></script>
-  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="build/js/main.min.js"></script>
+</body>
 </html>

@@ -1,7 +1,7 @@
-
 .photogrid {
 	margin: 0 auto;
 	width: 100%;
+	text-align: center;
 }
 
 .list {
@@ -27,7 +27,6 @@
 		flex: 0 1 25%;
 	}
 }
-
 
 .meta-data{
 	background:rgba(0,0,0,0.6);
@@ -70,4 +69,10 @@
 		margin-left: .5rem;
 		margin-right: .17rem;
 	}
+}
+
+.loader-gif {
+	height: 50px;
+	margin: 0 auto 1rem;
+	width: 50px;
 }
