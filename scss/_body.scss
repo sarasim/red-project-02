@@ -1,81 +1,78 @@
-
 .photogrid {
 	margin: 0 auto;
 	width: 100%;
+	text-align: center;
 }
 
-.photos {
-  display: block;
-  position: relative;
-}
-
-.photos ul {
+.list {
 	display:flex;
 	flex-flow: row wrap;
 	list-style: none;
-	justify-content: space-around;
 	margin-bottom: 2rem;
 }
 
-.photos li {
+.photo-wrapper {
 	flex: 0 1 100%;
+	position: relative;
 
-  @media only screen and (min-width:600px){
-  	.photos li {
-  		flex: 0 1 50%;
-  		max-width: 50%;
-  }
+	img {
+		width: 100%;
+	}
 
-  @media only screen and (min-width:1000px){
-  	.photos li {
-  		flex: 0 1 25%;
-  }
-}
+	@media only screen and (min-width:600px){
+		flex: 0 1 50%;
+	}
 
-.photos li .item-wrapper{
-  position: relative;
+	@media only screen and (min-width:1000px){
+		flex: 0 1 25%;
+	}
 }
 
 .meta-data{
-  background:rgba(0,0,0,0.6);
-  bottom: 0;
+	background:rgba(0,0,0,0.6);
+	bottom: 0;
 	color: $main-white;
 	display: flex;
 	font-size: 1rem;
-  padding: .5rem;
-  position: absolute;
+	justify-content: space-between;
+	padding: .5rem;
+	position: absolute;
 	width: 100%;
-  z-index: 1;
+	z-index: 1;
 }
 
 .user-wrapper {
-  height: auto;
-  overflow: hidden;
+	overflow: hidden;
 
-  img {
-    border-radius: 50%;
-    max-width: 50px;
-  }
+	img {
+		border-radius: 50%;
+		max-width: 50px;
+	}
 }
 
 .social-info{
-  font-weight: 700;
+	font-weight: 700;
 	text-align: right;
-	width: 65%;
-	}
+}
 
 .user-name{
-line-height: 1.5;
-margin-top: .33rem;
-overflow: hidden;
-white-space: nowrap;
+	line-height: 1.5;
+	margin-top: .33rem;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .fa {
 	font-size: .8rem;
 
-  .fa:before {
-    margin-left: .5rem;
-    margin-right: .17rem;
-  }
+	.fa:before {
+		margin-left: .5rem;
+		margin-right: .17rem;
+	}
+}
+
+.loader-gif {
+	height: 50px;
+	margin: 0 auto 1rem;
+	width: 50px;
 }
