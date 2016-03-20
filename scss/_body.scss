@@ -25,48 +25,44 @@
 	@media screen and (min-width: $desktop-width) {
 		flex: 0 1 25%;
 	}
-  &:hover > .meta-wrapper {
+  &:hover > .meta-data {
     height: 70px;
   }
 }
 
-.meta-data{
+.meta-data {
 	background:rgba(0,0,0,0.6);
 	bottom: 0;
 	color: $main-white;
 	display: flex;
-	font-size: 1rem;
 	justify-content: space-between;
 	padding: .5rem;
 	position: absolute;
 	width: 100%;
-	z-index: 1;
-}
-
-.user-wrapper {
+	z-index: 99;
 	overflow: hidden;
-
-	img {
-		border-radius: 50%;
-		max-width: 50px;
-	}
 }
 
-.social-info{
+.user-wrapper img {
+	border-radius: 50%;
+	margin-left: .75rem;
+	width: 3.15rem;
+}
+
+.social-info {
 	font-weight: 700;
 	margin-right:.75rem;
 	text-align: right;
 }
 
-.user-name{
+.user-name {
 	line-height: 1.5;
 	margin-top: .33rem;
-	overflow: hidden;
 	white-space: nowrap;
 }
 
 .fa {
-	font-size: .8rem;
+	font-size: $mobile-font-size * .9;
 
 	.fa:before {
 		margin-left: .5rem;
@@ -78,21 +74,4 @@
 	height: 50px;
 	margin: 0 auto 1rem;
 	width: 50px;
-}
-
-.load-more {
-  background: #e2231a;
-  border: 0;
-  color: white;
-  display: block;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: .75rem 3rem;
-  margin: 1rem auto;
-  text-transform: uppercase;
-
-  &:hover {
-    cursor: pointer;
-    background: darken(#e2231a, 10%);
-  }
 }
