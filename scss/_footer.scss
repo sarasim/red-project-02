@@ -1,12 +1,15 @@
 .site-footer {
   color: $brand-grey;
-  font-size: .9rem;
-  height: 15vh;
+  padding-bottom: 2rem 0;
   text-align: center;
 
-  @media only screen and (min-width:1000px){
-      text-align: left;
-      padding-left: 2rem;
+  @include tablet {
+    font-size: $tablet-font-size * .9;
+  }
+
+  @include desktop {
+    padding-left: 2rem;
+    text-align: left;
   }
 }
 

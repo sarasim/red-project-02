@@ -8,12 +8,12 @@
 	padding-bottom: 2rem;
 	padding-top: 2rem;
 
-	@media only screen and (min-width: $tablet-width){
+	@include tablet {
 		flex-flow: row nowrap;
 		width: 100%;
 	}
 
-	@media only screen and (min-width: $desktop-width){
+	@include desktop {
 		justify-content: flex-start;
 		padding-left: 2rem;
 	}
@@ -28,7 +28,7 @@
 		max-width: 100%;
 	}
 
-	@media only screen and (min-width: $tablet-width){
+	@include tablet {
 		padding-right: 20px;
 	}
 }
@@ -37,7 +37,7 @@
 	display: block;
 	width: 300px;
 	text-align: center;
-	@media only screen and (min-width: $tablet-width) {
+	@include tablet {
 		width: 240px;
 	}
 }
@@ -47,25 +47,27 @@
 	position: relative;
 	width: 100%;
 
-	&:before {
-		content: "#";
-		font-size: 2rem;
-		font-weight: 700;
-		position: absolute;
-		left: .5rem;
-		top: -.25rem;
+	@include tablet {
+		width: 100%;
+	}
+	@include desktop {
+		width: 300px;
 	}
 
-	@media only screen and (min-width: $tablet-width){
-			width: 100%;
+	&:before {
+		content: "#";
+		font-size: $mobile-font-size * 1.65;
+		@include tablet {
+			font-size: $tablet-font-size * 1.5;
 		}
-
-	@media only screen and (min-width: $desktop-width){
-				width: 300px;
-		}
+		font-weight: 600;
+		position: absolute;
+		left: .5rem;
+		top: -.10rem;
+	}
 }
 
-.search-bar input {
+.search-box {
 	background-color: transparent;
 	border:none;
   color: #fff;
