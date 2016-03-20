@@ -19,13 +19,15 @@
 		width: 100%;
 	}
 
-	@include tablet {
+	@media screen and (min-width: $tablet-width) {
 		flex: 0 1 50%;
 	}
-
-	@include desktop {
+	@media screen and (min-width: $desktop-width) {
 		flex: 0 1 25%;
 	}
+  &:hover > .meta-wrapper {
+    height: 70px;
+  }
 }
 
 .meta-data{
@@ -52,6 +54,7 @@
 
 .social-info{
 	font-weight: 700;
+	margin-right:.75rem;
 	text-align: right;
 }
 
@@ -75,4 +78,21 @@
 	height: 50px;
 	margin: 0 auto 1rem;
 	width: 50px;
+}
+
+.load-more {
+  background: #e2231a;
+  border: 0;
+  color: white;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: .75rem 3rem;
+  margin: 1rem auto;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+    background: darken(#e2231a, 10%);
+  }
 }
